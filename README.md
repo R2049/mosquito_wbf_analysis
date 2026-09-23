@@ -102,6 +102,7 @@ Organize the WAV files as follows:
 
 
 
+
 Only mosquito recordings should be placed in the free-flying and tethered folders. Ambient recordings must be placed in the ambient folder.
 
 
