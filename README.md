@@ -1,10 +1,10 @@
-\# Mosquito Wing-Beat-Frequency Analysis
+# Mosquito Wing-Beat-Frequency Analysis
 
 
 Analysis code for: A Mosquito Test and Measurement Platform for High-Fidelity Acoustic Acquisition of Wing Beat Frequencies
 
 
-\## Analyses
+## Analyses
 
 
 
@@ -48,7 +48,7 @@ The tethered recording configurations were not paired and were collected in diff
 
 
 
-\## Important measurement note
+## Important measurement note
 
 
 
@@ -64,7 +64,7 @@ It does not normalize, amplify, filter, denoise, or otherwise alter recording am
 
 
 
-\## Required folder structure
+## Required folder structure
 
 
 
@@ -109,7 +109,7 @@ The `outside\_acl2` directory refers to tethered recordings obtained outside the
 
 
 
-\## Installation
+## Installation
 
 
 
@@ -149,7 +149,7 @@ Install the dependencies:
 
 
 
-\## Running the complete analysis
+## Running the complete analysis
 
 
 
@@ -169,7 +169,7 @@ The default paths are `data`, `results`, and `config.json`, so the shorter comma
 
 
 
-\## Analysis settings
+## Analysis settings
 
 
 
@@ -181,29 +181,29 @@ The supplied configuration uses:
 
 
 
-\- 1.0-s analysis windows;
+- 1.0-s analysis windows;
 
-\- 0.5-s hop duration;
+- 0.5-s hop duration;
 
-\- Hann-windowed Welch power spectral density;
+- Hann-windowed Welch power spectral density;
 
-\- 8,192-sample spectral segments for mosquito recordings;
+- 8,192-sample spectral segments for mosquito recordings;
 
-\- 16,384-sample spectral segments for ambient recordings;
+- 16,384-sample spectral segments for ambient recordings;
 
-\- female candidate-WBF search range of 300–600 Hz;
+- female candidate-WBF search range of 300–600 Hz;
 
-\- male candidate-WBF search range of 500–900 Hz;
+- male candidate-WBF search range of 500–900 Hz;
 
-\- minimum primary peak prominence of 10 dB;
+- minimum primary peak prominence of 10 dB;
 
-\- minimum harmonic prominence of 4 dB;
+- minimum harmonic prominence of 4 dB;
 
-\- harmonic-frequency tolerance of 15 Hz;
+- harmonic-frequency tolerance of 15 Hz;
 
-\- local background region of ±100 Hz;
+- local background region of ±100 Hz;
 
-\- exclusion of ±10 Hz around the candidate peak from the local background.
+- exclusion of ±10 Hz around the candidate peak from the local background.
 
 
 
@@ -215,7 +215,7 @@ The fundamental is not assumed to be the highest-amplitude spectral component, b
 
 
 
-\## Interpretation of candidate detection
+## Interpretation of candidate detection
 
 
 
@@ -227,7 +227,7 @@ Candidate detection is an acoustic classification. Without synchronized video or
 
 
 
-\## Overlapping windows
+## Overlapping windows
 
 
 
@@ -243,7 +243,7 @@ The recording-level summaries—not individual windows—are used in boxplots an
 
 
 
-\## Output structure
+## Output structure
 
 
 
@@ -263,39 +263,39 @@ The program creates:
 
 
 
-\### Free-flight outputs
+### Free-flight outputs
 
 
 
-\- `free\_flight\_per\_window.csv`
+- `free\_flight\_per\_window.csv`
 
-\- `free\_flight\_per\_recording.csv`
+- `free\_flight\_per\_recording.csv`
 
-\- `free\_flight\_summary.csv`
+- `free\_flight\_summary.csv`
 
-\- `free\_flight\_detection\_by\_sex.png`
+- `free\_flight\_detection\_by\_sex.png`
 
-\- `free\_flight\_median\_wbf\_by\_sex.png`
+- `free\_flight\_median\_wbf\_by\_sex.png`
 
-\- `free\_flight\_peak\_prominence\_by\_sex.png`
+- `free\_flight\_peak\_prominence\_by\_sex.png`
 
-\- female and male candidate-WBF histograms
-
-
-
-\### Tethered outputs
+- female and male candidate-WBF histograms
 
 
 
-\- `tethered\_per\_window.csv`
+### Tethered outputs
 
-\- `tethered\_per\_recording.csv`
 
-\- `tethered\_summary.csv`
 
-\- `tethered\_detection.png`
+- `tethered\_per\_window.csv`
 
-\- `tethered\_peak\_prominence.png`
+- `tethered\_per\_recording.csv`
+
+- `tethered\_summary.csv`
+
+- `tethered\_detection.png`
+
+- `tethered\_peak\_prominence.png`
 
 
 
@@ -303,19 +303,19 @@ The tethered results are descriptive because the outside-ACL-2 and inside-enclos
 
 
 
-\### Ambient outputs
+### Ambient outputs
 
 
 
-\- `ambient\_spectrum\_comparison.csv`
+- `ambient\_spectrum\_comparison.csv`
 
-\- `ambient\_integrated\_band\_summary.csv`
+- `ambient\_integrated\_band\_summary.csv`
 
-\- `ambient\_one\_third\_octave\_summary.csv`
+- `ambient\_one\_third\_octave\_summary.csv`
 
-\- `ambient\_acl2\_vs\_inside\_spectrum.png`
+- `ambient\_acl2\_vs\_inside\_spectrum.png`
 
-\- `ambient\_noise\_reduction\_one\_third\_octave.png`
+- `ambient\_noise\_reduction\_one\_third\_octave.png`
 
 
 
@@ -331,7 +331,7 @@ Positive values indicate lower recorded ambient power inside the isolation enclo
 
 
 
-\## Citation
+## Citation
 
 
 
