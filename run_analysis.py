@@ -509,7 +509,7 @@ def summarize_conditions(recordings: pd.DataFrame) -> pd.DataFrame:
     def q3(values):
         return values.quantile(0.75)
 
-    return (
+    summary = (
         recordings.groupby(["condition", "sex"], as_index=False)
         .agg(
             n_recordings=("file_name", "count"),
@@ -518,16 +518,33 @@ def summarize_conditions(recordings: pd.DataFrame) -> pd.DataFrame:
             q3_detection_percent=("detection_percent", q3),
             minimum_detection_percent=("detection_percent", "min"),
             maximum_detection_percent=("detection_percent", "max"),
+
             median_recording_wbf_hz=(
                 "median_candidate_wbf_hz",
                 "median",
             ),
+            q1_recording_wbf_hz=(
+                "median_candidate_wbf_hz",
+                q1,
+            ),
+            q3_recording_wbf_hz=(
+                "median_candidate_wbf_hz",
+                q3,
+            ),
+
             median_recording_peak_prominence_db=(
                 "median_peak_prominence_db",
                 "median",
             ),
         )
     )
+
+    summary["iqr_recording_wbf_hz"] = (
+        summary["q3_recording_wbf_hz"]
+        - summary["q1_recording_wbf_hz"]
+    )
+
+    return summary
 
 
 # =============================================================================
