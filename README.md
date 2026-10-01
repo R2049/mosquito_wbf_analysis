@@ -333,8 +333,6 @@ Positive values indicate lower recorded ambient power inside the isolation enclo
 
 
 ## Citation
-
-[![DOI](https://zenodo.org/badge/1382899480.svg)](https://doi.org/10.5281/zenodo.22911727)
-
+[![DOI](https://zenodo.org/badge/1382899480.svg)](https://doi.org/10.5281/zenodo.23077512)
 
 
